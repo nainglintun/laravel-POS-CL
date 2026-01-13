@@ -1,0 +1,6 @@
+user : myanmaict.net@gmail.com 
+password:myanmaict
+
+
+admin;admin@gmail.com 
+password:admin123
