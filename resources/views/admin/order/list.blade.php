@@ -56,7 +56,7 @@
                @endif
               
                  {{-- create search box data searching in this category list page--}}
-                 <div class="col-3">
+                 {{-- <div class="col-3">
                     <h4 class="text-secondary">Search Key:<span class="text-danger">{{request('key')}}</span></h4>
                 </div>
                 <div class="mb-3 col-4 offset-8">
@@ -69,18 +69,15 @@
                                 </button>
                         </div>
                 </form>
-                </div>
+                </div> --}}
             {{-- create search box data searching in this category list page--}}
 
             {{-- total search value show section  --}}
             <div class="row my-2">
                 <div class="col-1 text-center offset-10 p-2 bg-white shadow-sm ">
-                    <h4><i class="fa-solid fa-database"></i>  </h4>
+                    <h4><i class="fa-solid fa-database"></i>  {{$order->total()}} </h4>
                 </div>
-            </div>
-
-
-                
+            </div> 
              {{-- total search value show section  --}}                
                 <div class="table-responsive table-responsive-data2">
                     <table class="table table-data2 text-center table-hover">
