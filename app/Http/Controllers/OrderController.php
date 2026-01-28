@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Models\OrderList;
 
 class OrderController extends Controller
 {
@@ -17,6 +18,6 @@ class OrderController extends Controller
 
         // output data format as array
         // dd($order->toArray());
-        return view('admin.order.list',compact('order'));
+         return view('admin.order.list',compact('order'));
     }
 }

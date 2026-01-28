@@ -92,48 +92,29 @@
                                 <th>Order Code</th>
                                 <th>Amount</th>
                                 <th>Status</th>
-                                <th></th>
+                                
                             </tr>
                         </thead>
-                        <tbody>                   
-
-
-
+                        <tbody>          
                             {{-- insert image way from the database and project --}}
-                            {{-- @foreach($pizzas as $p)
+                            @foreach($order as $o)
                             <tr class="tr-shadow">
-                                
-                                <td class="col-2"><img src="{{asset('storage/'.$p->image)}}" alt="" class="img-thumbnail shadow-sm"></td>
-                                <td class="col-3">{{$p->name}}</td>
-                                <td class="col-2">{{$p->price}}</td>
-                                <td class="col-2">{{$p->category_name}}</td>
-                                <td class="col-2"><i class="fa-solid fa-eye"></i> - {{$p->view_count}}</td>
-                                <td class="col-2">
-                                    <div class="table-data-feature">
-                                        <a href="{{route('product#edit',$p->id)}}">
-                                            <button class="item me-1" data-toggle="tooltip" data-placement="top" title="Detail">
-                                                <i class="fa-solid fa-eye"></i>
-                                            </button>
-                                        </a>
-                                        <a href="{{route('product#updatePage',$p->id)}}">
-                                            <button class="item me-1" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                            </button>
-                                        </a>
+                                <td>{{$o->user_id}}</td>
+                                <td>{{$o->user_name}}</td>
+                                <td>{{$o->created_at->format('F-j-Y')}}</td>
+                                <td>{{$o->order_code}}</td>
+                                <td>{{$o->total_price}} Ks</td>
+                                <td>
+                                    <select name="status" class="form-control">
+                                        <option value="0" @if ($o->status == 0) selected @endif>Pending</option>
+                                        <option value="1" @if ($o->status == 1) selected @endif>Accept</option>
+                                        <option value="2" @if ($o->status == 2) selected @endif>Reject</option>
 
-
-                                        <a href="{{route('product#delete',$p->id)}}">
-                                            <button class="item me-1" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                        </a>
-
-
-                                     </div>
-                                </td>
-                        </tr>
+                                    </select>
+                                </td>                                
+                           </tr>
                         @endforeach
-                        </tbody> --}}
+                        </tbody>
                     </table>
                    {{-- pagination section --}}
                         <div class="mt-3">

@@ -104,6 +104,8 @@ Route::middleware(['auth'])->group(function () {
      //order
        Route::prefix('order')->group(function(){
             Route::get('list',[OrderController::class,'orderList'])->name('admin#orderList');
+            
+            
        
     });
 
@@ -165,6 +167,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('order',[AjaxController::class,'order'])->name('ajax#order');
                 Route::get('clear/cart',[AjaxController::class,'clearCart'])->name('ajax#clearCart');
                 Route::get('clear/current/product',[AjaxController::class,'clearCurrentProduct'])->name('clearCurrentProduct');
+
 
 
         });
