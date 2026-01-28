@@ -118,7 +118,7 @@
                     </table>
                    {{-- pagination section --}}
                         <div class="mt-3">
-                            {{-- {{$pizzas->links()}} --}}
+                            {{$order->links()}}
                         </div>
                     {{-- pagination section --}}
                 </div>
