@@ -14,6 +14,7 @@ class OrderController extends Controller
         // join user table -> user table.id = order table = user_id
         $order=Order::select('orders.*','users.name as user_name')
         ->leftJoin('users','users.id','orders.user_id')
+        ->orderBy('created_at','DESC')
         ->paginate(3);
 
         // output data format as array

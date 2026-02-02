@@ -78,6 +78,16 @@
                     <h4><i class="fa-solid fa-database"></i>  {{$order->total()}} </h4>
                 </div>
             </div> 
+             
+            <div class="d-flex">
+                <button class="me-3 mb-2 btn btn-small btn-outline-warning">Pending</button>
+                <button class="me-3 mb-2 btn btn-small btn-outline-success">Accept</button>
+                <button class="me-3 mb-2 btn btn-small btn-outline-danger">Reject</button>
+                
+            </div>
+         
+
+
              {{-- total search value show section  --}}                
                 <div class="table-responsive table-responsive-data2">
                     <table class="table table-data2 text-center table-hover">
@@ -95,7 +105,7 @@
                         <tbody>          
                             {{-- insert image way from the database and project --}}
                             @foreach($order as $o)
-                            <tr class="tr-shadow">
+                            <tr class="tr-shadow" style="margin-bottom:2px !important;">
                                 <td>{{$o->user_id}}</td>
                                 <td>{{$o->user_name}}</td>
                                 <td>{{$o->created_at->format('F-j-Y')}}</td>
