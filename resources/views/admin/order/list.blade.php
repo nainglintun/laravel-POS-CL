@@ -80,12 +80,13 @@
             </div> 
              
             <div class="d-flex">
-                <button class="me-3 mb-2 btn btn-small btn-outline-warning">Pending</button>
-                <button class="me-3 mb-2 btn btn-small btn-outline-success">Accept</button>
-                <button class="me-3 mb-2 btn btn-small btn-outline-danger">Reject</button>
-                
-            </div>
-         
+                <label for="" class="mt-2">Order Status</label>
+                <select name="status" class="form-control col-2 mb-3 ms-2 text-center">
+                    <option value="0">Pending</option>
+                    <option value="1">Accept</option>
+                    <option value="2">Reject</option>
+                </select>                
+            </div>        
 
 
              {{-- total search value show section  --}}                
